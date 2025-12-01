@@ -4,7 +4,7 @@ async function initialize() {
     console.log('VK Mini App initialized');
 
     const u = await vkBridge.send('VKWebAppGetUserInfo');
-    window.vkUserId = u.id;
+    window.vkUserId = `${u.id}_VK`;
 
     configureFirstByStartParam();
   } catch (err) {
@@ -61,3 +61,4 @@ document.getElementById('email-form').addEventListener('submit', async function 
   }
 
 });
+
