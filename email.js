@@ -23,7 +23,7 @@ document.getElementById('email-form').addEventListener('submit', async function 
   const errorEl = document.getElementById('email-error');
 
   try {
-    const find_email = await fetch(`https://ndb.fut.ru/api/v2/tables/moqj9txmglwy87u/records/count?where=(tg-id,eq,${window.vkUserId})`, {
+    const find_email = await fetch(`https://ndb.fut.ru/api/v2/tables/m6tyxd3346dlhco/records/count?where=(tg-id,eq,${window.vkUserId})`, {
       method: 'GET',
       headers: {
         'accept': 'application/json',
@@ -38,7 +38,7 @@ document.getElementById('email-form').addEventListener('submit', async function 
       return;
     }
 
-    const res = await fetch(`https://ndb.fut.ru/api/v2/tables/moqj9txmglwy87u/records/count?where=(tg-id,eq,${window.vkUserId})~and(Результат КОТ,neq,-1)`, {
+    const res = await fetch(`https://ndb.fut.ru/api/v2/tables/m6tyxd3346dlhco/records/count?where=(tg-id,eq,${window.vkUserId})~and(Результат КОТ,neq,-1)`, {
       method: 'GET',
       headers: {
         'accept': 'application/json',
@@ -59,4 +59,5 @@ document.getElementById('email-form').addEventListener('submit', async function 
     console.error(err);
     errorEl.textContent = 'Ошибка сервера. Повтори попытку позже';
   }
+
 });
