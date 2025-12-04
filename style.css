@@ -224,9 +224,16 @@ h2 {
 }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+#screen-start,
+#screen-bye {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
+
 
