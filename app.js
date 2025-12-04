@@ -353,17 +353,5 @@ document.addEventListener('DOMContentLoaded', () => {
   showScreen('start');         
   initializeVk();
   setupStartForm();
-
-  const email = localStorage.getItem('test_email');
-  const submitted = localStorage.getItem('test_submitted') === 'true';
-
-  if (email && submitted) {
-    showScreen('bye');
-  } else if (email && !submitted) {
-    showScreen('test');
-    if (!testInitialized) {
-      initTestScreen();
-      testInitialized = true;
-    }
-  }
 });
+
